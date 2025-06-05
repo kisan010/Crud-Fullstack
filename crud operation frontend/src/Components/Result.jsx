@@ -53,7 +53,7 @@ const Result=({allusers,update})=>{
                 <td><img src={`https://crud-fullstack-33le.onrender.com/${item.profile}`} alt="User Profile" width="100" height="100" style={{border:'2px solid black',borderRadius:'50%'}} /></td>
                 <td>{item.name}</td>
                 <td>{item.email}</td>
-                <td>{item.password}</td>
+                <td>{item.password ? "••••••••" : "Not Set"}</td>
                 <td>
                     <button className="updatebtn" onClick={(e)=>handleEdit(item)} >Edit</button>
                     <button className="deletebtn" onClick={(e)=>handleDelete(e,item._id)}>Delete</button>
