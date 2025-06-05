@@ -50,7 +50,7 @@ const Result=({allusers,update})=>{
     <tbody >
         {currentUsers.map((item, index) => (
             <tr key={index}>
-                <td><img src={`http://localhost:2020/${item.profile}`} alt="User Profile" width="100" height="100" style={{border:'2px solid black',borderRadius:'50%'}} /></td>
+                <td><img src={`https://crud-fullstack-33le.onrender.com/${item.profile}`} alt="User Profile" width="100" height="100" style={{border:'2px solid black',borderRadius:'50%'}} /></td>
                 <td>{item.name}</td>
                 <td>{item.email}</td>
                 <td>{item.password}</td>
