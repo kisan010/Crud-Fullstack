@@ -20,9 +20,9 @@ const Result=({allusers,update})=>{
    {
     console.log(id)
     try{
-           await axios.delete(`http://localhost:2020/users/${id}`);
+           await axios.delete(`https://crud-fullstack-33le.onrender.com/users/${id}`);
            swal("success","Delete success!","success");
-           mutate("http://localhost:2020/users")
+           mutate("https://crud-fullstack-33le.onrender.com/users")
     }
     catch(err)
     {

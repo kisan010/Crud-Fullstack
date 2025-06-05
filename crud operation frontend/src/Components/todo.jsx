@@ -21,7 +21,7 @@ const fetcher = async (url) => {
 };
  
   
-const { data: users, error: usersError } = useSWR("http://localhost:2020/users",fetcher);
+const { data: users, error: usersError } = useSWR("https://crud-fullstack-33le.onrender.com/users",fetcher);
 if (usersError) return <div>Error fetching users!</div>;
   if (!users) return <div>Loading users...</div>;
    const update=(item)=>{

@@ -40,7 +40,7 @@ const Form = ({ updatedata }) => {
     }
     try {
       const { data } = await axios.post(
-        "http://localhost:2020/users",
+        "https://crud-fullstack-33le.onrender.com/users",
         formData,
         {
           headers: {
@@ -48,7 +48,7 @@ const Form = ({ updatedata }) => {
           },
         }
       );
-      mutate("http://localhost:2020/users"); 
+      mutate("https://crud-fullstack-33le.onrender.com/users"); 
       swal("success", "user Created !", "success");
       setUser({ name: "", email: "", password: "", file: null });
       if (fileinputRef.current) {
@@ -75,7 +75,7 @@ const Form = ({ updatedata }) => {
         formData.append("profile", user.file);
       }
       console.log(updatedata);
-      await axios.put(`http://localhost:2020/users/${_id}`, 
+      await axios.put(`https://crud-fullstack-33le.onrender.com/users/${_id}`, 
         formData,
         {
            headers:{
@@ -88,7 +88,7 @@ const Form = ({ updatedata }) => {
       if (fileinputRef.current) {
         fileinputRef.current.value = "";
       }
-      mutate("http://localhost:2020/users");
+      mutate("https://crud-fullstack-33le.onrender.com/users");
       handleedit(false);
     } catch (err) {
       setError({ emailErr: err });
